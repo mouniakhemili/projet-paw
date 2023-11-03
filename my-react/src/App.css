@@ -38,28 +38,37 @@
 }
 body {
   border-radius: 10px;
+  background-image: url(../public/7561340.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  
 }
-
+textarea,input{
+  text-decoration: none;
+}
 main {
+  margin-top:80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .box {
-  width: 60%;
+  width: 50%;
   height: 60vh;
   margin-left: 250px;
 }
 
 .title {
-  width: 100%;
+  width: 60%;
   height: 40px;
   background-color: rgb(241, 240, 240);
   margin-bottom: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-left: 280px;
+  margin-top: 80px;
 }
 
 h1 {
@@ -75,23 +84,40 @@ h1 {
 }
 
 .inputsBox {
-  width: 100%;
+  width: 63%;
+  margin-left: 270px;
 }
 
 .inputText {
   width: 90%;
   height: 50px;
-  border: 1px solid rgb(220, 220, 220);
+  border-bottom: 1px solid rgb(10, 14, 232);
+  border-top:white ;
+  border-left:white ;
+  border-right:white ;
   outline: none;
   margin-left: 20px;
+  font-size: 18px;
+  
 }
-
 .checkbox {
-  width: 15px;
-  height: 10px;
+  width: 20px;
+  height: 15px;
   margin-left: 0;
 }
-
+.btn1{
+  background-color: red;
+  padding: 5px ;
+}
 .input i {
   cursor: pointer;
 }
+.star-filled {
+  color: yellow;
+ }
+ 
+ /* .star-empty {
+  color: gray;
+ } */
+ 
+ 
