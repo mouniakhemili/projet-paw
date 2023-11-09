@@ -1,7 +1,3 @@
-
-
-
-import { ReactDOM } from "react-dom";
 import React from "react";
 import TodoList from "./TodoList.js";
 import styles from "./App.css";

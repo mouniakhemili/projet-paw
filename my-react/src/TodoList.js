@@ -1,10 +1,95 @@
+// import React, { useState } from "react";
+//  import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+//  import { faPlus, faTrash } from "@fortawesome/free-solid-svg-icons";
+//  import { faStar } from "@fortawesome/free-regular-svg-icons";
+//  import './App.css';
+// const TodoList = () => {
+//  const [tasks, setTasks] = useState([]);
 
+//  const addTask = () => {
+//     setTasks((prevTasks) => [...prevTasks, { task: '', completed: false, important: false }]);
+//  };
+
+//  const handleCheckboxChange = (e) => {
+//     const taskId = e.target.id.split("btn")[1];
+
+//     setTasks((prevTasks) => {
+//       return prevTasks.map((task, index) => {
+//         if (index === parseInt(taskId)) {
+//           return { ...task, completed: e.target.checked };
+//         }
+
+//         return task;
+//       });
+//     });
+//  };
+
+//  const handleStarIconClick = (index) => {
+//   alert('salut')
+//     setTasks((prevTasks) => {
+//       return prevTasks.map((task, i) => {
+//         if (i === index) {
+//           return { ...task, important: !task.important };
+//         }
+
+//         return task;
+//       });
+//     });
+//  };
+
+//  const deleteTask = (index) => {
+//     setTasks((prevTasks) => {
+//       return prevTasks.filter((task, i) => i !== index);
+//     });
+//  };
+
+//  return (
+//     <div className="TodoList">
+//       <div className="title">
+//         <h1>Personnel</h1>
+//         <FontAwesomeIcon icon={faPlus} id="iconPlus" onClick={addTask} />
+//       </div>
+
+//       <div className="taskList">
+//         {tasks.map((task, index) => (
+//           <div key={index} className="task">
+//             <input
+//               type="text"
+//               id={`task${index}`}
+//               value={task.task}
+//               readOnly={task.completed}
+//             />
+
+//             <input
+//               type="checkbox"
+//               className="checkbox"
+//               id={`btn${index}`}
+//               checked={task.completed}
+//               onChange={handleCheckboxChange}
+//             />&nbsp;
+
+//             <FontAwesomeIcon
+//               icon={faStar}
+//               onClick={() => handleStarIconClick(index)}
+//               className={task.important ? "star-filled" : "star-empty"}
+//             />&nbsp;
+
+//             <FontAwesomeIcon icon={faTrash} onClick={() => deleteTask(index)} />
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//  );
+// };
+
+// export default TodoList;
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { faStar } from "@fortawesome/free-regular-svg-icons";
 import './App.css';
 const TodoList = () => {
+  
   
  const [tasks, setTasks] = useState([]);
  
@@ -32,14 +117,11 @@ const TodoList = () => {
       });
     });
  };
-
- const handleStarIconClick = (e) => {
-    const taskId = e.target.id.split("star")[1];
-    
-
+const handleStarIconClick = (index) => {
+  // alert('salut')
     setTasks((prevTasks) => {
-      return prevTasks.map((task, index) => {
-        if (index === parseInt(taskId)) {
+      return prevTasks.map((task, i) => {
+        if (i === index) {
           return { ...task, important: !task.important };
         }
 
@@ -94,14 +176,14 @@ const TodoList = () => {
               onChange={handleCheckboxChange}
             />&nbsp;
 
-            <FontAwesomeIcon
+           <FontAwesomeIcon
               icon={faStar}
-              onClick={handleStarIconClick}
-              className={task.important ? "star-filled" : "star-empty"}
-            />&nbsp;
+             onClick={() => handleStarIconClick(index)}
+             className={task.important ? "star-filled" : "star-empty"}
+/>&nbsp;
 
-            <FontAwesomeIcon icon={faTrash} onClick={() => deleteTask(index)} />
-          </div>
+           <FontAwesomeIcon icon={faTrash} onClick={() => deleteTask(index)} />
+         </div>
         ))}
       </div>
     </div>
@@ -109,6 +191,7 @@ const TodoList = () => {
 };
 
 export default TodoList;
+
 // import React, { useState } from "react";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faPlus, faTrash } from "@fortawesome/free-solid-svg-icons";

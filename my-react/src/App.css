@@ -99,6 +99,11 @@ h1 {
   margin-left: 20px;
   font-size: 18px;
   
+  
+}
+textarea,input{
+  text-decoration: none;
+  /* outline: none; */
 }
 .checkbox {
   width: 20px;
@@ -112,12 +117,13 @@ h1 {
 .input i {
   cursor: pointer;
 }
-.star-filled {
-  color: yellow;
- }
+
  
  /* .star-empty {
   color: gray;
  } */
- 
- 
+ /* .star-empty:active{
+  background-color: red;
+ }
+  */
+  
